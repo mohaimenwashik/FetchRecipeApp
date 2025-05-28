@@ -4,6 +4,8 @@
 //
 //  Created by Mohaimen Washik on 5/27/25.
 //
+//  This is the viewModel of the app that takes care of simulating the API calls
+//  and sorting mechanism, searching mechanism, api calling and caching 
 
 import Foundation
 import SwiftUI

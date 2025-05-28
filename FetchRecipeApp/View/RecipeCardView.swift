@@ -4,6 +4,8 @@
 //
 //  Created by Mohaimen Washik on 5/27/25.
 //
+//  This represents the UI of each item shown on the list
+//
 
 import SwiftUI
 
@@ -15,6 +17,7 @@ struct RecipeCardView: View {
 
     var body: some View {
         HStack(spacing: 16) {
+            // Image on the left
             Group {
                 if let image = image {
                     Image(uiImage: image)
@@ -29,6 +32,7 @@ struct RecipeCardView: View {
             .cornerRadius(8)
             .clipped()
             
+            // Texts on the right
             VStack(alignment: .leading, spacing: 4) {
                 Text(recipe.name)
                     .font(.headline)

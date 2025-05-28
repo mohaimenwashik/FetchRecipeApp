@@ -4,6 +4,8 @@
 //
 //  Created by Mohaimen Washik on 5/27/25.
 //
+//  This file caches the list of recipe received from the API calls
+//
 
 import Foundation
 

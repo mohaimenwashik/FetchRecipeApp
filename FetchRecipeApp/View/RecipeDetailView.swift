@@ -4,6 +4,8 @@
 //
 //  Created by Mohaimen Washik on 5/27/25.
 //
+//  This is the page that shows the details of each individual recipes
+//
 
 import SwiftUI
 import WebKit

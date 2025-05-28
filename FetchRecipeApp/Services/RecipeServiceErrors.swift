@@ -4,6 +4,9 @@
 //
 //  Created by Mohaimen Washik on 5/27/25.
 //
+//  These are the list of errors used throughout the app to prevent code repeatations
+//  and optimise the error types in one place
+//
 
 import Foundation
 

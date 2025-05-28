@@ -8,7 +8,7 @@
 import XCTest
 @testable import FetchRecipeApp
 
-final class FetchRecipeAppTests: XCTestCase {
+final class FetchRecipeAppDecodingDataTests: XCTestCase {
     
     // Testing the decoder struct
     func testRecipeDecoding() throws {

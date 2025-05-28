@@ -4,8 +4,9 @@
 //
 //  Created by Mohaimen Washik on 5/27/25.
 //
-
-import SwiftUI
+//  This is the main and the first point of contact of the app from where users can
+//  navigate to different pages, sort and search items as well.
+//
 
 import SwiftUI
 
@@ -26,8 +27,12 @@ struct RecipeListView: View {
                                 Text(error)
                                     .multilineTextAlignment(.center)
                                     .padding()
-                                Button("Retry") {
+                                Button(action: {
                                     viewModel.fetchRecipes(forceRefresh: true)
+                                }) {
+                                    Text("Retry")
+                                        .font(.callout)
+                                        .foregroundStyle(.blue)
                                 }
                                 .padding()
                             }

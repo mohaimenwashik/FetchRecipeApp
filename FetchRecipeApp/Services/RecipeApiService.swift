@@ -17,16 +17,16 @@ final class RecipeApiService {
     private let cacheMinutes = 30
     
     // Init to use for All Recipes
-    init(recipeBaseURL: URL = Configurations.RECIPE_URL) {
-        self.recipeBaseURL = recipeBaseURL
-        RecipeCachingService.shared.clear()
-    }
-    
-    // Init to use for Malformed Recipes
-//    init(recipeBaseURL: URL = Configurations.MALFORMED_URL) {
+//    init(recipeBaseURL: URL = Configurations.RECIPE_URL) {
 //        self.recipeBaseURL = recipeBaseURL
 //        RecipeCachingService.shared.clear()
 //    }
+    
+    // Init to use for Malformed Recipes
+    init(recipeBaseURL: URL = Configurations.MALFORMED_URL) {
+        self.recipeBaseURL = recipeBaseURL
+        RecipeCachingService.shared.clear()
+    }
     
     // Init to use for Empty Recipes
 //    init(recipeBaseURL: URL = Configurations.EMPTY_URL) {
@@ -53,11 +53,6 @@ final class RecipeApiService {
         
         // Making the network request
         let (data, _ ) = try await URLSession.shared.data(from: recipeBaseURL)
-        
-        // Checking if the network request is made successfully
-        //        guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-        //            throw RecipeServiceErrors.networkError
-        //        }
         
         // Checking if the data response is empty
         guard !data.isEmpty else {
