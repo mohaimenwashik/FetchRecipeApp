@@ -14,7 +14,7 @@ final class RecipeCachingService {
     private let fileManager = FileManager.default
     private let cacheFileName = "cachedRecipes.json"
 
-    private var cacheFilePath: URL {
+    var cacheFilePath: URL {
         fileManager.urls(for: .cachesDirectory, in: .userDomainMask)[0]
             .appendingPathComponent(cacheFileName)
     }
