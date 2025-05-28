@@ -14,10 +14,10 @@ struct Recipe: Identifiable, Codable {
     let id: String
     let name: String
     let cuisine: String
-    let photoURLSmall: URL?
-    let photoURLLarge: URL?
-    let sourceURL: URL?
-    let youtubeURL: URL?
+    let photoURLSmall: String?
+    let photoURLLarge: String?
+    let sourceURL: String?
+    let youtubeURL: String?
     
     enum CodingKeys: String, CodingKey {
         case id = "uuid"
