@@ -9,28 +9,24 @@ import XCTest
 @testable import FetchRecipeApp
 
 final class FetchRecipeAppTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    // Testing the decoder struct
+    func testRecipeDecoding() throws {
+        let json = """
+        {
+            "cuisine": "Malaysian",
+            "name": "Apam Balik",
+            "photo_url_large": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/b9ab0071-b281-4bee-b361-ec340d405320/large.jpg",
+            "photo_url_small": "https://d3jbb8n5wk0qxi.cloudfront.net/photos/b9ab0071-b281-4bee-b361-ec340d405320/small.jpg",
+            "source_url": "https://www.nyonyacooking.com/recipes/apam-balik~SJ5WuvsDf9WQ",
+            "uuid": "0c6ca6e7-e32a-4053-b824-1dbf749910d8",
+            "youtube_url": "https://www.youtube.com/watch?v=6R8ffRRJcrg"
         }
+        """.data(using: .utf8)!
+        
+        let recipe = try JSONDecoder().decode(Recipe.self, from: json)
+        XCTAssertEqual(recipe.name, "Apam Balik")
+        XCTAssertEqual(recipe.cuisine, "Malaysian")
+        XCTAssertEqual(recipe.id, "0c6ca6e7-e32a-4053-b824-1dbf749910d8")
     }
-
 }

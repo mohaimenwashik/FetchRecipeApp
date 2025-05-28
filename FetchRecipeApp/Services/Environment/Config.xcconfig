@@ -1,0 +1,13 @@
+//
+//  Config.xcconfig
+//  FetchRecipeApp
+//
+//  Created by Mohaimen Washik on 5/27/25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+RECIPE_URL = https:/$()/d3jbb8n5wk0qxi.cloudfront.net/recipes.json
+MALFORMED_URL = https:/$()/d3jbb8n5wk0qxi.cloudfront.net/recipes-malformed.json
+EMPTY_URL = https:/$()/d3jbb8n5wk0qxi.cloudfront.net/recipes-empty.json

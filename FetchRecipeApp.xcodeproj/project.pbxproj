@@ -29,20 +29,28 @@
 		696970AE2DE6945B00334D1A /* FetchRecipeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FetchRecipeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		696970D02DE69F1D00334D1A /* Exceptions for "FetchRecipeApp" folder in "FetchRecipeApp" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 696970932DE6945A00334D1A /* FetchRecipeApp */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		696970962DE6945A00334D1A /* FetchRecipeApp */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				696970D02DE69F1D00334D1A /* Exceptions for "FetchRecipeApp" folder in "FetchRecipeApp" target */,
+			);
 			path = FetchRecipeApp;
 			sourceTree = "<group>";
 		};
 		696970A72DE6945B00334D1A /* FetchRecipeAppTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = FetchRecipeAppTests;
-			sourceTree = "<group>";
-		};
-		696970B12DE6945B00334D1A /* FetchRecipeAppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = FetchRecipeAppUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -77,7 +85,6 @@
 			children = (
 				696970962DE6945A00334D1A /* FetchRecipeApp */,
 				696970A72DE6945B00334D1A /* FetchRecipeAppTests */,
-				696970B12DE6945B00334D1A /* FetchRecipeAppUITests */,
 				696970952DE6945A00334D1A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -152,9 +159,6 @@
 			);
 			dependencies = (
 				696970B02DE6945B00334D1A /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				696970B12DE6945B00334D1A /* FetchRecipeAppUITests */,
 			);
 			name = FetchRecipeAppUITests;
 			packageProductDependencies = (
@@ -399,6 +403,8 @@
 				DEVELOPMENT_TEAM = Q9R94VWRJ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FetchRecipeApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -429,6 +435,8 @@
 				DEVELOPMENT_TEAM = Q9R94VWRJ6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FetchRecipeApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
