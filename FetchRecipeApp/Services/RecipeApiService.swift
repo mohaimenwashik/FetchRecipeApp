@@ -17,16 +17,16 @@ final class RecipeApiService {
     private let cacheMinutes = 30
     
     // Init to use for All Recipes
-//    init(recipeBaseURL: URL = Configurations.RECIPE_URL) {
-//        self.recipeBaseURL = recipeBaseURL
-//        RecipeCachingService.shared.clear()
-//    }
-    
-    // Init to use for Malformed Recipes
-    init(recipeBaseURL: URL = Configurations.MALFORMED_URL) {
+    init(recipeBaseURL: URL = Configurations.RECIPE_URL) {
         self.recipeBaseURL = recipeBaseURL
         RecipeCachingService.shared.clear()
     }
+    
+    // Init to use for Malformed Recipes
+//    init(recipeBaseURL: URL = Configurations.MALFORMED_URL) {
+//        self.recipeBaseURL = recipeBaseURL
+//        RecipeCachingService.shared.clear()
+//    }
     
     // Init to use for Empty Recipes
 //    init(recipeBaseURL: URL = Configurations.EMPTY_URL) {
